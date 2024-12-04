@@ -1,0 +1,16 @@
+﻿<Window x:Class="_1135In4thCabinetToPDF.NewForceMajoreForStudentXD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1135In4thCabinetToPDF"
+        mc:Ignorable="d"
+        Title="NewForceMajoreForStudentXD" Height="450" Width="800">
+    <StackPanel>
+        <Label Content="Что произошло?"/>
+        <TextBox Text="{Binding ForceMajore.Description}"/>
+        <Label Content="Когда произошло?"/>
+        <DatePicker SelectedDate="{Binding ForceMajore.ForceDate}"/>
+        <Button Content="Добавить форс-мажор!" Click="AddToDB"/>
+    </StackPanel>
+</Window>

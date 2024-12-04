@@ -1,0 +1,34 @@
+﻿<Window x:Class="_1135In4thCabinetToPDF.StudInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1135In4thCabinetToPDF"
+        mc:Ignorable="d"
+        Title="StudInfo" Height="450" Width="800">
+    <StackPanel>
+        <StackPanel DataContext="{Binding InfoStudent}">
+            <Label Content="Фамилия Имя"/>
+            <TextBox Text="{Binding FI}"/>
+            <Label Content="Часов в аудитории"/>
+            <TextBox Text="{Binding HoursIn4th}"/>
+            <Label Content="Вопросов Алексей Анатольвичу"/>
+            <TextBox Text="{Binding QuestionsCount}"/>
+            <Label Content="Работ сдал"/>
+            <TextBox Text="{Binding WorkCount}"/>
+            <Label Content="Форс-мажоры:"/>
+            <Button Content="Добавить форс-мажор!" Click="NewForce"/>
+            <ListBox ItemsSource="{Binding StudentForceMajoreXD}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Label Content="{Binding Description}"/>
+                            <DatePicker SelectedDate="{Binding ForceDate}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <Button Content="Саве" Click="Save"/>
+    </StackPanel>
+</Window>
